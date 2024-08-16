@@ -2,7 +2,7 @@ package com.kalle.demo;
 
 import java.util.Random;
 
-public class Monster {
+public class Monster implements ICombat {
 
 
 
@@ -121,6 +121,16 @@ public class Monster {
         System.out.println("Precision: " + precision);
         System.out.println("Evasion: " + evasion);
         System.out.println("Vitality: " + vitality + "/" + vitality);
+    }
+
+    @Override
+    public void attack() {
+        System.out.println("monster attacks player");
+    }
+
+    @Override
+    public void flee() {
+        System.out.println("Monster flee from player");
     }
 
 

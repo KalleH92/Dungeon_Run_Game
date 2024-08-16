@@ -1,6 +1,6 @@
 package com.kalle.demo;
 
-public class Player {
+public class Player implements ICombat{
 
     private int power;
     private String name;
@@ -10,6 +10,19 @@ public class Player {
     private int xp;
     private int level;
     private int baseDamage;
+
+    private int playerDamage;
+
+    public int getPlayerDamage() {
+        return playerDamage;
+    }
+
+    public void setPlayerDamage(int playerDamage) {
+        this.playerDamage = playerDamage;
+    }
+
+
+
 
     public int getPower() {
         return power;
@@ -83,6 +96,30 @@ public class Player {
         System.out.println("Vitality: " + vitality + "/100");
         System.out.println("Level: " + level);
         System.out.println("Experience: " + xp + "/100");
+    }
+
+    public void fightStatus () {
+        System.out.println("Power: " + power);
+        System.out.println("Base damage: " + baseDamage);
+        System.out.println("Precision: " + precision);
+        System.out.println("Evasion: " + evasion);
+        System.out.println("Vitality: " + vitality + "/100");
+    }
+
+    @Override
+    public void attack() {
+        System.out.println("Player attack monster");
+        System.out.println("test base dmg " + baseDamage + "test " + power);
+        setPlayerDamage(playerDamage = baseDamage + (((power * 2) / 4)));
+
+        System.out.println("testing power " + power + " Testing playerdmg " + playerDamage + " Test Base dmg " + baseDamage);
+
+    }
+
+
+    @Override
+    public void flee() {
+        System.out.println("Player flee from monster");
     }
 
 
