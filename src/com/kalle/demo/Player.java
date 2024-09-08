@@ -10,24 +10,19 @@ public class Player implements ICombat{
     private int xp;
     private int level;
     private int baseDamage;
-
     private int playerDamage;
 
     public int getPlayerDamage() {
         return playerDamage;
     }
-
     public void setPlayerDamage(int playerDamage) {
         this.playerDamage = playerDamage;
     }
 
 
-
-
     public int getPower() {
         return power;
     }
-
     public void setPower(int power) {
         this.power = power;
     }
@@ -35,7 +30,6 @@ public class Player implements ICombat{
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -43,7 +37,6 @@ public class Player implements ICombat{
     public int getPrecision() {
         return precision;
     }
-
     public void setPrecision(int precision) {
         this.precision = precision;
     }
@@ -51,7 +44,6 @@ public class Player implements ICombat{
     public int getEvasion() {
         return evasion;
     }
-
     public void setEvasion(int evasion) {
         this.evasion = evasion;
     }
@@ -59,7 +51,6 @@ public class Player implements ICombat{
     public int getVitality() {
         return vitality;
     }
-
     public void setVitality(int vitality) {
         this.vitality = vitality;
     }
@@ -67,7 +58,6 @@ public class Player implements ICombat{
     public int getXp() {
         return xp;
     }
-
     public void setXp(int xp) {
         this.xp = xp;
     }
@@ -75,7 +65,6 @@ public class Player implements ICombat{
     public int getLevel() {
         return level;
     }
-
     public void setLevel(int level) {
         this.level = level;
     }
@@ -83,7 +72,6 @@ public class Player implements ICombat{
     public int getBaseDamage() {
         return baseDamage;
     }
-
     public void setBaseDamage(int baseDamage) {
         this.baseDamage = baseDamage;
     }
@@ -108,20 +96,17 @@ public class Player implements ICombat{
 
     @Override
     public void attack() {
-        System.out.println("Player attack monster");
-        System.out.println("test base dmg " + baseDamage + "test " + power);
+        //System.out.println("Player attack monster");
+        //System.out.println("test base dmg " + baseDamage + "test " + power);
         setPlayerDamage(playerDamage = baseDamage + (((power * 2) / 4)));
 
-        System.out.println("testing power " + power + " Testing playerdmg " + playerDamage + " Test Base dmg " + baseDamage);
-
+        //System.out.println("testing power " + power + " Testing playerdmg " + playerDamage + " Test Base dmg " + baseDamage);
     }
-
 
     @Override
     public void flee() {
         System.out.println("Player flee from monster");
     }
-
 
     /*
    public Player() {}
@@ -140,5 +125,4 @@ public class Player implements ICombat{
         this.baseDamage = baseDamage;
     }
     */
-
 }

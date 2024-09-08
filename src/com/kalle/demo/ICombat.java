@@ -7,7 +7,7 @@ public interface ICombat {
 
 
     default void attack() {
-        System.out.println("test");
+        //System.out.println("test");
         int playerDamage = p1.getBaseDamage() + (p1.getPower() * 2 / 4 + 1);
 
     }
